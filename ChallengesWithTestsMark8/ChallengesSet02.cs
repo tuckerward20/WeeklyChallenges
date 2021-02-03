@@ -7,52 +7,137 @@ namespace ChallengesWithTestsMark8
     {
         public bool CharacterIsALetter(char c)
         {
-            throw new NotImplementedException();
+            char[] characters = "abcdefghijklmnopqrstuvwxyzZXCVBNMLKJHGFDSAQWERTYUIOP".ToCharArray();
+            bool success = false;
+            foreach (char letter in characters)
+
+                if (letter == c)
+                {
+                    success = true;
+                }
+            return success;
         }
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            throw new NotImplementedException();
+            int isEven = vals.Length;
+            if (isEven % 2 == 0)
+                return true;
+            else
+                return false;
         }
 
         public bool IsNumberEven(int number)
         {
-            throw new NotImplementedException();
+            if (number % 2 == 0)
+                return true;
+            else
+                return false;
         }
 
         public bool IsNumberOdd(int num)
         {
-            throw new NotImplementedException();
+            if (num % 2 == 1)
+                return true;
+            else if (num % 2 == -1)
+                return true;
+            else
+                return false;
         }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            throw new NotImplementedException();
+            double min = 0;
+            double max = 0;
+            foreach (double num in numbers)
+            {
+                for (int i = 0; i < numbers.; i++)
+                {
+                    if (num > numbers[i])
+                    {
+                        max = num;
+                    }
+                }
+            }
+            foreach (double num in numbers)
+            {
+                for (int i = 0; i < IEnumerable.Count; i++)
+                {
+                    if (num < numbers[i])
+                    {
+                        min = num;
+                    }
+                }
+            }
+            return max + min;
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            throw new NotImplementedException();
+            char[] array1 = str1.ToCharArray();
+            char[] array2 = str2.ToCharArray();
+            int num1 = array1.Length;
+            int num2 = array2.Length;
+            if (num1 < num2)
+            {
+                return num1;
+            }
+            else
+            {
+                return num2;
+            }
         }
 
         public int Sum(int[] numbers)
         {
-            throw new NotImplementedException();
+            int sum = 0;
+            foreach (int count in numbers)
+            {
+                sum += count;
+            }
+            return sum;
         }
 
         public int SumEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            int sum = 0;
+            foreach (int count in numbers)
+            {
+                if (count % 2 == 0)
+                {
+                    sum += count;
+                }
+            }
+            return sum;
         }
 
         public bool IsSumOdd(List<int> numbers)
         {
-            throw new NotImplementedException();
+            bool success = false;
+            int sum = 0;
+            foreach (int count in numbers)
+            {
+                sum += count;
+            }
+            if (sum % 2 == 1)
+            {
+                success = true;
+            }
+            return success;
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            int countDownNumber = Convert.ToInt32(number);
+            int counter = 0;
+            for (long i = countDownNumber; i >= 1; i--)
+            {
+                if (countDownNumber % 2 == 1)
+                {
+                    counter++;
+                }
+            }
+            return counter;
         }
     }
 }

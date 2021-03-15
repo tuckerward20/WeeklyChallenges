@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMark8
 {
@@ -20,6 +21,8 @@ namespace ChallengesWithTestsMark8
 
         public bool CountOfElementsIsEven(string[] vals)
         {
+            if (vals == null)
+                return false;
             int isEven = vals.Length;
             if (isEven % 2 == 0)
                 return true;
@@ -29,6 +32,7 @@ namespace ChallengesWithTestsMark8
 
         public bool IsNumberEven(int number)
         {
+            
             if (number % 2 == 0)
                 return true;
             else
@@ -47,29 +51,66 @@ namespace ChallengesWithTestsMark8
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            double min = 0;
-            double max = 0;
+            //double min = 0;
+            //double max = 0;
+            /*
+            var numbersList = new List<double>();
+            numbersList.Add(numbers);
+            */
+            /*
             foreach (double num in numbers)
             {
                 for (int i = 0; i < numbers.; i++)
                 {
-                    if (num > numbers[i])
+                    if (num > max)
                     {
                         max = num;
                     }
                 }
             }
-            foreach (double num in numbers)
+            */
+            
+            if (numbers == null || numbers.Count() == 0)
             {
+                return 0;
+            }
+            
+            double min = 100000;
+            double max = 0;
+
+            foreach (var num in numbers)
+            {
+                
+                /*
                 for (int i = 0; i < IEnumerable.Count; i++)
                 {
-                    if (num < numbers[i])
+                    if (num < min)
                     {
                         min = num;
                     }
+                    if (num > max)
+                    {
+                        max = num;
+                    }
+                }
+                */
+                if (num <= min)
+                {
+                    min = num;
+                }
+                if (num >= max)
+                {
+                    max = num;
                 }
             }
             return max + min;
+            /* --- Solution ---
+            if (numbers == null || numbers.Count() == 0)
+            {
+                return 0;
+            }
+            return numbers.Min() + numbers.Max();
+            */
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
@@ -90,6 +131,8 @@ namespace ChallengesWithTestsMark8
 
         public int Sum(int[] numbers)
         {
+            if (numbers == null)
+                return 0;
             int sum = 0;
             foreach (int count in numbers)
             {
@@ -100,6 +143,8 @@ namespace ChallengesWithTestsMark8
 
         public int SumEvens(int[] numbers)
         {
+            if (numbers == null)
+                return 0;
             int sum = 0;
             foreach (int count in numbers)
             {
@@ -113,13 +158,15 @@ namespace ChallengesWithTestsMark8
 
         public bool IsSumOdd(List<int> numbers)
         {
+            if (numbers == null)
+                return false;
             bool success = false;
             int sum = 0;
             foreach (int count in numbers)
             {
                 sum += count;
             }
-            if (sum % 2 == 1)
+            if (sum % 2 == 1 || sum % 2 == -1)
             {
                 success = true;
             }
@@ -128,11 +175,12 @@ namespace ChallengesWithTestsMark8
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            int countDownNumber = Convert.ToInt32(number);
+            //int countDownNumber = Convert.ToInt32(number);
+            long countDownNumber = number;
             int counter = 0;
-            for (long i = countDownNumber; i >= 1; i--)
+            for (long i = (countDownNumber - 1); i > 0; i--)
             {
-                if (countDownNumber % 2 == 1)
+                if (i % 2 == 1)
                 {
                     counter++;
                 }

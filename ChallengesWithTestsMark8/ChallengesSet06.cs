@@ -45,7 +45,9 @@ namespace ChallengesWithTestsMark8
 
             if (num <= 1)
                 return false;
-            for (int i = 2; i < Math.Sqrt(num)*2; i++)
+            if (num == 2 || num == 3)
+                return true;
+            for (int i = 2; i <= Math.Sqrt(num)*2; i++)
             {
                 if (num % i == 0)
                     return false;
@@ -55,42 +57,58 @@ namespace ChallengesWithTestsMark8
 
         public int IndexOfLastUniqueLetter(string str)
         {
-            var seen = new List<char>();
-            foreach (var letter in str)
+            //var seen = new List<int>();
+            //foreach (var letter in str)
+            //{
+            //    if (seen.IsDistinct(letter))
+            //    {
+            //    }
+            //    else if 
+            //    {
+            //        seen.Add(str.IndexOf(letter));
+            //    }
+            //}
+            //if (seen.Count() < 1)
+            //    return -1;
+            //return seen.Last();
+
+            var distinct = str.Distinct().ToList();
+            if (str.Length < 1)
+                return -1;
+
+            for (int i = (distinct.Count() - 1); i >= 0; i--)
             {
-                if (seen.Contains(letter))
+                if (str.Where(x => x == distinct[i]).Count() == 1)
                 {
+                    return str.IndexOf(distinct[i]);
                 }
-                else
-                {
-                    seen.Add(letter);
-                }
-            }
-            return seen.Count() - 1;
+                
+            } 
+            return -1;
         }
 
         public int MaxConsecutiveCount(int[] numbers)
         {
-            int count = 0;
+            int count = 1;
             int index = 0;
             int solution = 0;
 
             for (int i = 0; i < numbers.Length - 1; i++)
             {
-                if (numbers[i] + 1 == numbers[i + 1])
+                if (numbers[i] == numbers[i + 1])
                 {
                     count += 1;
                     index = i + 2;
                     if (count > solution)
                     {
                         solution = count;
-                    }
+                    }       
                 }
                 else
                 {
-                    count = 0;
-                    i = index;
+                    count = 1;
                 }
+
             }
             return solution;
 
@@ -100,10 +118,16 @@ namespace ChallengesWithTestsMark8
         public double[] GetEveryNthElement(List<double> elements, int n)
         {
             var solution = new List<double>();
+            if (elements is null || n < 1)
+                return solution.ToArray();
+            
             if (n <= elements.Count())
             {
-                for (int i = (n - 1); i < elements.Count(); i += n)
+                for (int i = (n -1); i < elements.Count(); i += n)
                 {
+                    if (i < 0)
+                        i = 0;
+                    
                     solution.Add(elements[i]);
                 }
             }

@@ -1,0 +1,15 @@
+/Users/tuckerward/repos/csharp-15-v2/WeeklyChallenges/ChallengesWithTestsMark8/bin/Debug/net5.0/ChallengesWithTestsMark8.deps.json
+/Users/tuckerward/repos/csharp-15-v2/WeeklyChallenges/ChallengesWithTestsMark8/bin/Debug/net5.0/ChallengesWithTestsMark8.runtimeconfig.json
+/Users/tuckerward/repos/csharp-15-v2/WeeklyChallenges/ChallengesWithTestsMark8/bin/Debug/net5.0/ChallengesWithTestsMark8.runtimeconfig.dev.json
+/Users/tuckerward/repos/csharp-15-v2/WeeklyChallenges/ChallengesWithTestsMark8/bin/Debug/net5.0/ChallengesWithTestsMark8.dll
+/Users/tuckerward/repos/csharp-15-v2/WeeklyChallenges/ChallengesWithTestsMark8/bin/Debug/net5.0/ref/ChallengesWithTestsMark8.dll
+/Users/tuckerward/repos/csharp-15-v2/WeeklyChallenges/ChallengesWithTestsMark8/bin/Debug/net5.0/ChallengesWithTestsMark8.pdb
+/Users/tuckerward/repos/csharp-15-v2/WeeklyChallenges/ChallengesWithTestsMark8/obj/Debug/net5.0/ChallengesWithTestsMark8.csprojAssemblyReference.cache
+/Users/tuckerward/repos/csharp-15-v2/WeeklyChallenges/ChallengesWithTestsMark8/obj/Debug/net5.0/ChallengesWithTestsMark8.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tuckerward/repos/csharp-15-v2/WeeklyChallenges/ChallengesWithTestsMark8/obj/Debug/net5.0/ChallengesWithTestsMark8.AssemblyInfoInputs.cache
+/Users/tuckerward/repos/csharp-15-v2/WeeklyChallenges/ChallengesWithTestsMark8/obj/Debug/net5.0/ChallengesWithTestsMark8.AssemblyInfo.cs
+/Users/tuckerward/repos/csharp-15-v2/WeeklyChallenges/ChallengesWithTestsMark8/obj/Debug/net5.0/ChallengesWithTestsMark8.csproj.CoreCompileInputs.cache
+/Users/tuckerward/repos/csharp-15-v2/WeeklyChallenges/ChallengesWithTestsMark8/obj/Debug/net5.0/ChallengesWithTestsMark8.dll
+/Users/tuckerward/repos/csharp-15-v2/WeeklyChallenges/ChallengesWithTestsMark8/obj/Debug/net5.0/ref/ChallengesWithTestsMark8.dll
+/Users/tuckerward/repos/csharp-15-v2/WeeklyChallenges/ChallengesWithTestsMark8/obj/Debug/net5.0/ChallengesWithTestsMark8.pdb
+/Users/tuckerward/repos/csharp-15-v2/WeeklyChallenges/ChallengesWithTestsMark8/obj/Debug/net5.0/ChallengesWithTestsMark8.genruntimeconfig.cache
